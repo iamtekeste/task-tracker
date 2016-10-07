@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="app.css">
+    <title>TaskTracker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="task-tracker">
+            <div class="header">
+                <h1>TaskTracker</h1>
+                <span>v2.0</span>
+            </div>
+            <div class="main">
+                <div class="add-task-form">
+                    <h2>Create Task</h2>
+                    <form action="#">
+                        <div class="task-input">
+                            <label for="task-name">Task Name</label>
+                            <input type="text" id="task-name" value="">
+                        </div>
+                        <div class="task-input">
+                            <label for="task-date">Date</label>
+                            <input type="text" id="task-date" value="">
+                        </div>
+                        <div class="task-input">
+                            <label for="task-assignee">Assigned To</label>
+                            <input type="text" id="task-assignee" value="">
+                        </div>
+                        <div class="task-input">
+                            <button type="submit" id="submit">Submit</button>
+                        </div>
+                    </form>
+                </div><!--
+                --><div class="task-list">
+                    <h2>Existing Tasks</h2>
+                    <div id="tasks">
+                    </div>
+                </div><!--
+            --></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
