@@ -130,3 +130,10 @@ span.task-date {
 span.task-assignee {
     float: right;
 }
+
+/* media query for basic responsiveness */
+@media screen and (max-width: 768px){
+    .add-task-form, .task-list {
+        width: 100%;
+    }
+}

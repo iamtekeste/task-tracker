@@ -1,6 +1,7 @@
+window.addEventListener('load', function() {
 // By wrapping my app in an IIFE I can avoid global namespace pollution
 var TaskTracker = (function () {
-    // I am going to cache the DOM elements I will manipulating for performance purposes
+    // I am going to cache the DOM elements for performance purposes
     var _tasksDOM = document.getElementById('tasks');
     var _taskNameInput = document.getElementById('task-name');
     var _taskDateInput = document.getElementById('task-date');
@@ -70,3 +71,5 @@ var TaskTracker = (function () {
 
 // Initialize the app!
 TaskTracker.init();
+
+});
