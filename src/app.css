@@ -5,8 +5,9 @@
     padding: 0;
     font-family: Arial;
 }
-
 .container {
+   /* I had add this intially to center the app in the middle of 
+    of the page. */
     max-width: 800px;
     margin: 0 auto;
     padding: 15px 15px 35px;
@@ -39,7 +40,7 @@ h1 {
     font-size: 18px;
 }
 .main {
-    background: #f0f0f0;
+    background: #fff;
 }
 .add-task-form, .task-list {
     display: inline-block;
@@ -55,8 +56,8 @@ h1 {
     margin-bottom: 35px;
 }
 .add-task-form {
-    margin-right: 10px;
     padding-left: 30px;
+    border-right: 10px solid #f0f0f0;
 }
 .add-task-form .task-input:last-child {
     margin-bottom: 0px;
@@ -71,7 +72,7 @@ h1 {
     font-size: 14px;
     font-family: "Arial";
 }
-.task-input input[type="text"] {
+.task-input input {
     padding-left: 5px;
     height: 40px;
     width: 94.1176471%;
@@ -111,7 +112,8 @@ h1 {
     padding: 0px 5px 5px;
 }
 #tasks .task-item {
-    padding: 15px 10px;
+    padding: 11px 10px;
+    max-height: 40px;
 }
 #tasks .task-item:nth-child(even) {
     background: #ececec;
@@ -133,6 +135,10 @@ span.task-assignee {
 
 /* media query for basic responsiveness */
 @media screen and (max-width: 768px){
+    .add-task-form {
+         border-right: 0px;
+         border-bottom: 10px solid #f0f0f0;
+    }
     .add-task-form, .task-list {
         width: 100%;
     }
