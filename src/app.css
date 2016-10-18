@@ -42,8 +42,10 @@
   vertical-align: top;
   background-color: #ffffff;
   width: 49.6798976%;
-  padding-top: 32px;
-  padding-bottom: 50px; }
+  padding-top: 32px; }
+  @media screen and (max-width: 784px) {
+    .add-task-form, .task-list {
+      width: 100%; } }
 
 .add-task-form h2, .task-list h2 {
   font-size: 18px;
@@ -52,9 +54,14 @@
 
 .add-task-form {
   margin-right: 4.833px;
-  padding-left: 30px; }
+  padding-left: 30px;
+  padding-bottom: 50px; }
   .add-task-form h2 {
     margin-bottom: 28px; }
+  @media all and (max-width: 784px) {
+    .add-task-form {
+      border-right: 0px;
+      border-bottom: 10px solid #f0f0f0; } }
 
 .add-task-form .task-input:last-child {
   margin-bottom: 0px; }
@@ -90,18 +97,26 @@
       background-color: #5c5c5c; }
 
 .task-list {
-  padding-left: 16px; }
+  padding-left: 16px;
+  padding-bottom: 60px; }
   .task-list h2 {
     margin-bottom: 33px; }
+  @media all and (max-width: 784px) {
+    .task-list {
+      padding-right: 16px; } }
 
 #tasks {
   max-width: 345px;
   border: 4px solid #dedede;
   border-radius: 4px;
   padding: 0px 5px 5px; }
+  @media screen and (max-width: 784px) {
+    #tasks {
+      max-width: 100%; } }
 
 #tasks .task-item {
-  padding: 11px 10px; }
+  padding: 11px 10px;
+  word-wrap: break-word; }
   #tasks .task-item span {
     font-weight: bold; }
   #tasks .task-item span.task-name {
@@ -117,15 +132,3 @@
 
 #tasks .task-item:nth-child(even) {
   background: #ececec; }
-
-/* media query for basic responsiveness */
-@media screen and (max-width: 768px) {
-  .add-task-form {
-    border-right: 0px;
-    border-bottom: 10px solid #f0f0f0; }
-  .add-task-form, .task-list {
-    width: 100%; }
-  .task-list {
-    padding-right: 16px; }
-    .task-list #tasks {
-      max-width: 100%; } }
