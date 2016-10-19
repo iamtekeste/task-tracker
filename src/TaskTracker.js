@@ -1,6 +1,6 @@
 var TaskTracker = {
     tasks: [
-        {"name":	"TestTaskTestTaskTestTaskTestTaskTestTaskTestTask#1",	"date":	"12/01/2012",	"assigned":	"John	Doe"	},
+        {"name":	"Test   Task    #1",	"date":	"12/01/2012",	"assigned":	"John	Doe"	},
         {"name":	"Test	Task	#2",	"date":	"12/02/2012",	"assigned":	"John	Doe"	},
         {"name":	"Test	Task	#3",	"date":	"12/03/2012",	"assigned":	"John	Doe"	},
         {"name":	"Test	Task	#4",	"date":	"12/04/2012",	"assigned":	"John	Doe"	},
@@ -24,18 +24,24 @@ var TaskTracker = {
     // I am going to cache the DOM elements for performance purposes
     cacheDOM: function () {
         this.form = $('#new-task-form');
-        this.tasksEl = $('#tasks'); //document.getElementById('tasks');
-        this.taskNameInput = $('#task-name'); //document.getElementById('task-name');
-        this.taskDateInput = $('#task-date'); //document.getElementById('task-date');
-        this.taskAssigneeInput = $('#task-assignee')//document.getElementById('task-assignee');
-        this.submitButton = $('#submit');//document.getElementById('submit');
+        this.tasksEl = $('#tasks');
+        this.taskNameInput = $('#task-name');
+        this.taskDateInput = $('#task-date');
+        this.taskAssigneeInput = $('#task-assignee');
+        this.submitButton = $('#submit');
+    },
+    compileTemplate: function (task) {
+        var template = $('#task-template').html().trim();
+		for(prop in task) {
+			if(task.hasOwnProperty(prop)) {
+				template = template.replace('{{' + prop.toLowerCase() + '}}', task[prop]);
+			}
+		}
+		return  template;
     },
     createElement: function (task) {
-        var  template = '<span class="task-name">'+ task.name +'</span>' +
-            '<span class="task-date">' + task.date + '</span>' +
-            '<span class="task-assignee">' + task.assigned +'</span>';
-
-        var taskItemEl = $('<div class="task-item"></div>') //document.createElement('div');
+        var  template = this.compileTemplate(task);
+        var taskItemEl = $('<div class="task-item"></div>')
                             .html(template);
         return taskItemEl;
     },

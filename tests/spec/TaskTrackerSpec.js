@@ -2,7 +2,7 @@ describe('TaskTracker', function () {
     var sampleTask;
     beforeEach(function () {
 
-        var html = [
+        var appHTML = [
             '<form action="#" id="new-task-form">',
             '<input type="text" id="task-name" value="Interview Tekeste" required>',
             '<input type="text" id="task-date" value="10/7/2016" required>',
@@ -10,11 +10,17 @@ describe('TaskTracker', function () {
             '<button type="submit" id="submit">Submit</button>',
             '</form>',
             '<div id="tasks">',
-            '</div>'
+            '</div>',
+            '<script type="text/x-makeshift-template" id="task-template">',
+            '<span class="task-name"> {{name}} </span>',
+            '<span class="task-date"> {{date}} </span>',
+            '<span class="task-assignee"> {{assigned}} </span>',
+            '</script>'
         ].join('');
+        var templateHTML = [
 
-        var fixture = jasmine.getFixtures().set(html);
-        jasmine.fixt
+        ].join('');
+        var fixture = jasmine.getFixtures().set(appHTML);
 
         sampleTask = {
             name: 'Interview Tekeste',

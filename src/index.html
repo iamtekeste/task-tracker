@@ -24,15 +24,15 @@
                     <form action="#" id="new-task-form">
                         <div class="task-input">
                             <label for="task-name">Task Name</label>
-                            <input type="text" id="task-name" value="" maxlength="20">
+                            <input type="text" id="task-name" value="" maxlength="30">
                         </div>
                         <div class="task-input">
                             <label for="task-date">Date</label>
-                            <input type="text" id="task-date" value="">
+                            <input type="text" id="task-date" value="" maxlength="10">
                         </div>
                         <div class="task-input">
                             <label for="task-assignee">Assigned To</label>
-                            <input type="text" id="task-assignee" value="">
+                            <input type="text" id="task-assignee" value="" maxlength="20">
                         </div>
                         <div class="task-input">
                             <button type="submit" id="submit">Submit</button>
@@ -47,5 +47,10 @@
             --></div>
         </div>
     </div>
+    <script type="text/x-makeshift-template" id="task-template">
+        <span class="task-name"> {{name}} </span>
+        <span class="task-date"> {{date}} </span>
+        <span class="task-assignee"> {{assigned}} </span>
+    </script>
 </body>
 </html>
