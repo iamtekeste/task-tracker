@@ -143,6 +143,8 @@
       padding-right: 10px;
       font-size: 14px;
       font-family: $secondary-brand-font-family;
+      min-width: 105px;
+      display: inline-block;
     }
     span.task-assignee, span.task-date {
       font-size: 12px;

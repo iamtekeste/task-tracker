@@ -122,7 +122,9 @@
   #tasks .task-item span.task-name {
     padding-right: 10px;
     font-size: 14px;
-    font-family: "Georgia", "serif"; }
+    font-family: "Georgia", "serif";
+    min-width: 105px;
+    display: inline-block; }
   #tasks .task-item span.task-assignee, #tasks .task-item span.task-date {
     font-size: 12px; }
   #tasks .task-item span.task-date {
