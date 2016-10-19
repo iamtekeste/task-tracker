@@ -38,9 +38,14 @@
 }
 .main {
   background: $primary-brand-color;
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
 }
 .add-task-form, .task-list {
-  display: inline-block;
+  // display: inline-block;
   vertical-align: top;
   background-color: $secondary-brand-color;
   width: 49.6798976%;
@@ -58,6 +63,7 @@
   }
 }
 .add-task-form {
+  float: left;
   margin-right: 4.833px;
   padding-left: 30px;
   padding-bottom: 50px;
@@ -103,6 +109,7 @@
   }
 }
 .task-list {
+  float: right;
   padding-left: 16px;
   padding-bottom: 60px;
   h2 {

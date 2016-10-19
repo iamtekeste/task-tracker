@@ -36,9 +36,12 @@
 
 .main {
   background: #f0f0f0; }
+  .main::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .add-task-form, .task-list {
-  display: inline-block;
   vertical-align: top;
   background-color: #ffffff;
   width: 49.6798976%;
@@ -53,6 +56,7 @@
   line-height: 1; }
 
 .add-task-form {
+  float: left;
   margin-right: 4.833px;
   padding-left: 30px;
   padding-bottom: 50px; }
@@ -97,6 +101,7 @@
       background-color: #5c5c5c; }
 
 .task-list {
+  float: right;
   padding-left: 16px;
   padding-bottom: 60px; }
   .task-list h2 {

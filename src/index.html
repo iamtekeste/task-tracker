@@ -24,7 +24,7 @@
                     <form action="#" id="new-task-form">
                         <div class="task-input">
                             <label for="task-name">Task Name</label>
-                            <input type="text" id="task-name" value="" maxlength="12" required>
+                            <input type="text" id="task-name" value="" maxlength="10" required>
                         </div>
                         <div class="task-input">
                             <label for="task-date">Date</label>
@@ -33,19 +33,19 @@
                         </div>
                         <div class="task-input">
                             <label for="task-assignee">Assigned To</label>
-                            <input type="text" id="task-assignee" value="" maxlength="12" required>
+                            <input type="text" id="task-assignee" value="" maxlength="10" required>
                         </div>
                         <div class="task-input">
                             <button type="submit" id="submit">Submit</button>
                         </div>
                     </form>
-                </div><!--
-                --><div class="task-list">
+                </div>
+                <div class="task-list">
                     <h2>Existing Tasks</h2>
                     <!--the tasks will be rendered inside #tasks div-->
                     <div id="tasks"></div>
-                </div><!--
-            --></div>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/x-makeshift-template" id="task-template">
