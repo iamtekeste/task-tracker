@@ -1,5 +1,7 @@
 @import "global";
 @import "variables";
+@import "mixins";
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -9,7 +11,6 @@
 .task-tracker {
   background: $secondary-brand-color;
   position: relative;
-  //padding-left: 30px;
 
   &::before {
     content: '';
@@ -94,17 +95,8 @@
     background-color: #ececec;
   }
   button {
-    background: #434343;
-    border: none;
-    color: $secondary-brand-color;
-    padding: 10px 20px;
-    margin-top: 3px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    transition: all .3s ease-in-out;
-
+    @include button(#434343, $secondary-brand-color);
+    
       &:hover {
         background-color: #5c5c5c;
       }

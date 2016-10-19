@@ -14,14 +14,14 @@ var TaskTracker = {
         this.render();
     },
     setupEventListeners: function () {
-        // wire up the submit button
+        // wire up the form
         this.form.submit(function (e) {
             e.preventDefault();
             var newTask = this.getNewTask();
             this.addTask(newTask);
         }.bind(this));
     },
-    // I am going to cache the DOM elements for performance purposes
+    // cache the DOM elements for performance purposes
     cacheDOM: function () {
         this.form = $('#new-task-form');
         this.tasksEl = $('#tasks');
@@ -40,13 +40,11 @@ var TaskTracker = {
     },
     createElement: function (task) {
         var  template = this.compileTemplate(task);
-        var taskItemEl = $('<div class="task-item"></div>')
-                            .html(template);
+        var taskItemEl = $('<div class="task-item"></div>').html(template);
         return taskItemEl;
     },
     render: function () {
-        // let's make sure we don't have anything in there
-        this.tasksEl.html('');
+        
         for(var i = 0; i < this.tasks.length; i++) {
             var taskItemEl = this.createElement(this.tasks[i]);
             this.tasksEl.append(taskItemEl);
@@ -63,13 +61,12 @@ var TaskTracker = {
         return newTask;
     },
     addTask: function (newTask) {
-        // let us prepend the new task;
         this.tasks.unshift(newTask);
-       //since we have new task let's prepend!
+
+       // create new DOM element and prepend it to the tasks list
         var taskEl = this.createElement(newTask);
         this.tasksEl.prepend(taskEl);
 
-        //let's clean the form inputs
         this.cleanUpForm();
     }
 };
