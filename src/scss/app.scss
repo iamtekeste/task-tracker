@@ -153,6 +153,12 @@
     span.task-assignee {
       float: right;
     }
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
   .task-item:nth-child(even) {
     background: #ececec;

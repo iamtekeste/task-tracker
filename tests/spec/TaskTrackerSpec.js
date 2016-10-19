@@ -72,8 +72,7 @@ describe('TaskTracker', function () {
     it('should add new task', function () {
         TaskTracker.setupEventListeners();
         var tasksCount = TaskTracker.tasks.length;
-        // we are clicking the submit button which would invoke the addTask method
-        $('#submit').click();
+        $('#new-task-form').submit();
         expect(TaskTracker.tasks.length).toEqual(tasksCount + 1);
     });
 

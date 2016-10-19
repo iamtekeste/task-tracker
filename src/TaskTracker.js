@@ -15,7 +15,7 @@ var TaskTracker = {
     },
     setupEventListeners: function () {
         // wire up the submit button
-        this.submitButton.click(function (e) {
+        this.form.submit(function (e) {
             e.preventDefault();
             var newTask = this.getNewTask();
             this.addTask(newTask);
@@ -28,7 +28,6 @@ var TaskTracker = {
         this.taskNameInput = $('#task-name');
         this.taskDateInput = $('#task-date');
         this.taskAssigneeInput = $('#task-assignee');
-        this.submitButton = $('#submit');
     },
     compileTemplate: function (task) {
         var template = $('#task-template').html().trim();

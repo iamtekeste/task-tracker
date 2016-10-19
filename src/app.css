@@ -129,6 +129,10 @@
     color: #666666; }
   #tasks .task-item span.task-assignee {
     float: right; }
+  #tasks .task-item::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 #tasks .task-item:nth-child(even) {
   background: #ececec; }
